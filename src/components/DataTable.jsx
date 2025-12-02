@@ -3,8 +3,6 @@ import React, { useState, useMemo } from "react";
 function DataTable({ rows }) {
   const rowsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
-
-  // SEARCH + FILTER STATES
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [trendFilter, setTrendFilter] = useState("all");
@@ -30,7 +28,6 @@ function DataTable({ rows }) {
     return "text-gray-600 dark:text-gray-400 font-medium";
   };
 
-  // FILTER + SEARCH LOGIC
   const filteredRows = useMemo(() => {
     return rows
       .filter((row) =>
@@ -59,7 +56,6 @@ function DataTable({ rows }) {
     <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 dark:border-gray-700/50 p-6">
       {/* SEARCH + FILTERS */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-        {/* SEARCH */}
         <input
           type="text"
           placeholder="Search by Name..."
@@ -70,8 +66,6 @@ function DataTable({ rows }) {
             setCurrentPage(1);
           }}
         />
-
-        {/* STATUS FILTER */}
         <select
           className="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
           value={statusFilter}
@@ -85,8 +79,6 @@ function DataTable({ rows }) {
           <option value="pending">Pending</option>
           <option value="inactive">Inactive</option>
         </select>
-
-        {/* TREND FILTER */}
         <select
           className="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
           value={trendFilter}
@@ -151,7 +143,6 @@ function DataTable({ rows }) {
                   <td className="px-4 py-3 text-gray-800 dark:text-gray-200">
                     {row.name}
                   </td>
-
                   <td className="px-4 py-3">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-semibold border ${getStatusColor(
@@ -161,18 +152,14 @@ function DataTable({ rows }) {
                       {row.status}
                     </span>
                   </td>
-
                   <td className="px-4 py-3 text-gray-800 dark:text-gray-200">
                     {row.value}
                   </td>
                   <td className="px-4 py-3 text-gray-800 dark:text-gray-200">
                     {row.revenue}
                   </td>
-
                   <td className="px-4 py-3 text-right">
-                    <span className={getTrendColor(row.trend)}>
-                      {row.trend}
-                    </span>
+                    <span className={getTrendColor(row.trend)}>{row.trend}</span>
                   </td>
                 </tr>
               ))
