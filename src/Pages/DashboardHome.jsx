@@ -1,4 +1,3 @@
-// DashboardHome.jsx
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import ChartBar from "../components/ChartBar";
@@ -26,7 +25,7 @@ const DashboardHome = () => {
     );
 
   return (
-    <div className="p-6 space-y-6 overflow-y-auto hide-scrollbar h-full">
+    <div className="p-4 md:p-6 lg:p-8 space-y-6 overflow-y-auto h-full">
       {/* Bento Cards */}
       <BentoGrid>
         {data.cards.map((card, idx) => (
@@ -34,7 +33,7 @@ const DashboardHome = () => {
             key={idx}
             title={card.title}
             value={card.value}
-            icon={React.createElement(iconMap[card.icon])}
+            icon={React.createElement(iconMap[card.icon], { className: "text-4xl" })}
             trend={card.trend}
           />
         ))}
