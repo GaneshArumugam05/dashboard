@@ -59,6 +59,7 @@
     { "id": 17, "name": "Video Library Access", "status": "Active", "value": 199, "revenue": "$5,940", "trend": "↑ 16.9%" },
     { "id": 18, "name": "Resume Builder Tool", "status": "Active", "value": 129, "revenue": "$3,370", "trend": "↑ 5.7%" },
     { "id": 19, "name": "AI Skill Pack", "status": "Pending", "value": 699, "revenue": "$12,740", "trend": "↑ 8.1%" },
-    { "id": 20, "name": "Data Science Mastery", "status": "Active", "value": 1599, "revenue": "$26,980", "trend": "↑ 24.5%" }
+    { "id": 20, "name": "Data Science Mastery", "status": "Active", "value": 1599, "revenue": "$26,980", "trend": "↑ 24.5%" },
+    { "id": 21, "name": "Data Science Mastery", "status": "Active", "value": 1599, "revenue": "$26,980", "trend": "↑ 24.5%" }
   ]
 }
