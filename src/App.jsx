@@ -32,7 +32,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/dashboard">
         <Routes>
           {/* Auth Routes */}
           <Route
