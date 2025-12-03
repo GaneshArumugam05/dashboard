@@ -1,10 +1,10 @@
+// src/context/ThemeContext.jsx - Perfect as-is
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Use localStorage or CSS preference
     if (typeof window !== "undefined")
       return (
         localStorage.theme === "dark" ||

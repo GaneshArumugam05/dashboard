@@ -40,7 +40,7 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4 light-only">
       <form
         onSubmit={onSubmit}
         className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md"

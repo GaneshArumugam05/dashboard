@@ -11,3 +11,32 @@
 .hide-scrollbar {
   scrollbar-width: none;
 }
+
+/* FIXED: ONLY input labels stay normal color */
+.light-only label {
+  color: inherit !important;
+}
+
+/* Force inputs to light theme (background only) */
+.light-only input,
+.light-only textarea,
+.light-only select {
+  background-color: white !important;
+  color: #1f2937 !important;
+}
+
+.light-only .bg-white {
+  background-color: white !important;
+}
+
+.light-only .text-blue-700 {
+  color: #1d4ed8 !important;
+}
+
+.light-only .text-blue-600 {
+  color: #2563eb !important;
+}
+
+.light-only .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #eff6ff 0%, #e0e7ff 100%) !important;
+}
